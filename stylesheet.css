@@ -114,3 +114,13 @@ a {
   flex-direction: row;     
   gap: 10px;
 }
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background-color: #7f5669;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
