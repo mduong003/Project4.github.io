@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Mary Duong's Project 4</title>
+      <link rel="stylesheet" href="stylesheet.css">
+   </head>
+   <body> 
+      <h1>Real-Time 3D Game Programming</h1>
+      <div class="description">
+         <h2>Description</h2>
+         <div class="textbox">
+            <p>My biggest challenges in this project were understanding the SDL3/OpenGL syntax. Even with prior experience from CSCI 4611, implementing everything from scratch was still confusing at times. Some of the hardest features to implement were the camera, mouse-movement, and the (spotlight) flashlight. 
+               Luckily, I was able to reference the <a href="https://learnopengl.com/Getting-started/Camera">OpenGL Camera Tutorial</a> for help implementing the camera and mouse feature.
+               For the flashlight, I followed the <a href="https://learnopengl.com/Lighting/Light-casters">OpenGL Lighting Tutorial</a>. However, I really struggle on this even though the tutorial only shows a few line of code. My main struggle with this feature was understanding the syntax for the fragment and vertex shader and how to pass variables. 
+               That being said, debugging for this project took much longer than I expected. For example, I spent an absurd amount of time trying to figure out why my keys weren't rendering or why key pickup wasn't working. I thought it was a map-coordinate math issue, only to eventually discover that I was rendering the player before the map.
+               Despite the challenges, the project was genuinely fun. I enjoyed building this little maze game and learning how to render 3D graphics without relying on ray tracing. It was a great hands-on way to deepen my understanding of real-time programming.
+            </p>
+            <p>Feel free to test out the game yourself! I also have to note that in my gifs below, I had to disable <code>SDL_SetWindowRelativeMouseMode</code> to screen record. It's also why I show my game being played in a top-down view because it was difficult to screen record and move my mouse when the cursor would leave the window.
+               The actual game itself has the feature enabled, so the mouse movement is continuous and your cursor does not go out of the screen window.</p>
+            <div class="features">
+               <p><strong>Additional Features I Implemented:</strong></p>
+               <ul>
+                  <li>Create a flashlight that moves with the player (must be a spot light)</li>
+                  <li>Texture map the walls and floors (use different textures for different models)</li>
+                  <li>Integrated keyboard and mouse control (must support strafing/sidestepping)</li>
+                  <li>Make a video of yourself playing, showcasing your features (various gifs below show case this)</li>
+            </ul>
+            </div>
+         </div>
+      </div>
+      <div class="description">
+         <h2>Rendered Scene Components</h2>
+         <div class="demo">
+            <h3>Wall, Floor, Start/Goal, Door, and Player (in order)</h3>
+            <div class="img-container">
+               <img src="img/brick.png" alt="brick wall"/>
+               <img src="img/wood.png" alt="wood floor"/>
+               <img src="img/start.png" alt="checkered floor"/>
+               <img src="img/door.png" alt="pink door"/>
+               <img src="img/player.png" alt="player"/>
+            </div>
+            <h3>Various Keys</h3>
+            <div class="img-container">
+               <img src="img/spotlightWithKey.png" alt="pink key"/>
+               <img src="img/key2.png" alt="orange key"/>
+               <img src="img/key3.png" alt="yellow key"/>
+               <img src="img/key4.png" alt="green key"/>
+               <img src="img/key5.png" alt="indigo key"/>
+               <img src="gif/spinningKeyVideo.gif" alt="spinning key animation"/>
+            </div>
+         </div>
+         <h2>Different Maps</h2>
+         <div class="demo">
+            <h3>Given Scenes: No Doors and Door w/ Key</h3>
+            <div class="map-container">
+               <img src="img/noDoorsMap.png" alt="no door map"/>
+               <img src="img/oneDoorKeyMap.png" alt="door with key map"/>
+            </div>
+            <h3>Additional Scenes: Multiple Door/Keys and Impossible Map</h3>
+            <div class="map-container">
+               <img src="img/allDoorKeysMap.png" alt="multiple door and key map"/>
+               <img src="img/noLeavingMap.png" alt="impossible map"/>
+            </div>
+            <h3>Toggling Map with 'M' key</h3>
+            <div class="map-container">
+               <img src="gif/togglingMap.gif" alt="toggle map"/>
+            </div>
+         </div>
+         <h2>Wall and Door Mechanic</h2>
+         <div class="demo">
+            <h3>Wall Collision</h3>
+            <div class="map-container">
+               <img src="gif/wallCollision.gif" alt="wall collision"/>
+            </div>
+            <h3>Blocked by Locked Door and Using Wrong Key</h3>
+            <div class="map-container">
+               <img src="gif/noUnlockVideo.gif" alt="locked door gif"/>
+            </div>
+            <h3>Door Unlock with Correct Key (key and door disappears when grabbed and/or unlocked)</h3>
+            <div class="map-container">
+               <img src="gif/doorDisappearing.gif" alt="unlocked door gif"/>
+            </div>
+            <h3>Unlocking Multiple Doors with Corresponding Key (aka video of me playing the full game)</h3>
+            <div class="map-container">
+               <img src="gif/completingFullMap.gif" alt="unlocked multiple door gif"/>
+            </div>
+         </div>
+         <h2>Flashlight Using Spotlight</h2>
+         <div class="demo">
+            <h3>Key in Front of Door</h3>
+            <div class="map-container">
+               <img src="gif/keyDoorVideo.gif" alt="door with key map"/>
+            </div>
+            <h3>Flashlight from a Distance</h3>
+            <div class="map-container">
+               <img src="gif/flashlightDistanceVideo.gif" alt="flashlight from far away"/>
+            </div>
+         </div>
+         <h2>Lighting</h2>
+         <div class="demo">
+            <h3>Only Ambient, Only Diffuse, and Phong-Lighting</h3>
+            <div class="map-container">
+               <img src="img/ambientOnly.png" alt="ambient"/>
+               <img src="img/diffuseOnly.png" alt="diffuse"/>
+               <img src="img/phong.png" alt="phong"/>
+            </div>
+         </div>
+   </body>
+</html>
